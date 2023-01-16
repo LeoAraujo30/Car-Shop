@@ -21,6 +21,14 @@ class CarsModel {
   public async addCar(car: ICar): Promise<ICar> {
     return this.model.create(car);
   }
+
+  public async getAll(): Promise<ICar[]> {
+    return this.model.find();
+  }
+
+  public async getOne(id: string): Promise<ICar | null> {
+    return this.model.findById(id);
+  }
 }
-  
+
 export default CarsModel;

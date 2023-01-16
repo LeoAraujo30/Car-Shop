@@ -7,4 +7,8 @@ const router = express.Router();
 
 router.post('/', controller.addCar);
 
+router.get('/:id', controller.getOne);
+
+router.get('/', controller.getAll);
+
 export default router;
