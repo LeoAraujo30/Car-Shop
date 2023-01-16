@@ -21,6 +21,14 @@ class CarsController {
     if (result) return res.status(200).json(result);
     return res.status(404).json({ message: 'Car not found' });
   };
+
+  public updateOne = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    if (id.length !== 24) return res.status(422).json({ message: 'Invalid mongo id' });
+    const result = await this.service.updateOne(id, req.body);
+    if (result) return res.status(200).json(result);
+    return res.status(404).json({ message: 'Car not found' });
+  };
 }
 
 export default CarsController;

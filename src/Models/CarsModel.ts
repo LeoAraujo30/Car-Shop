@@ -29,6 +29,11 @@ class CarsModel {
   public async getOne(id: string): Promise<ICar | null> {
     return this.model.findById(id);
   }
+
+  public async updateOne(id: string, newCar: ICar): Promise<number> {
+    const { modifiedCount } = await this.model.updateOne({ _id: id }, { ...newCar });
+    return modifiedCount;
+  }
 }
 
 export default CarsModel;

@@ -30,6 +30,15 @@ class CarsService {
     if (objCar) return new Car(objCar);
     return null;
   }
+
+  public async updateOne(id: string, newCar: ICar): Promise<Car | null> {
+    const modifiedCount = await this.model.updateOne(id, newCar);
+    const objCar = await this.model.getOne(id);
+    if (modifiedCount === 0 && objCar === null) {
+      return null;
+    }
+    return new Car(objCar as ICar);
+  }
 }
 
 export default CarsService;
