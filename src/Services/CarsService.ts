@@ -15,7 +15,7 @@ class CarsService {
       doorsQty: car.doorsQty,
       seatsQty: car.seatsQty,
     };
-    const newObj = await this.model.addCar(obj);
+    const newObj = await this.model.addVehicle(obj);
     return new Car(newObj);
   }
 

@@ -1,11 +1,13 @@
 import { model, models, Model, Schema } from 'mongoose';
 import ICar from '../Interfaces/ICar';
+import AbstractODM from './AbstractODM';
 
-class CarsModel {
+class CarsModel extends AbstractODM<ICar> {
   private schema: Schema;
   private model: Model<ICar>; 
 
   constructor() {
+    super();
     this.schema = new Schema<ICar>({
       model: { type: String, required: true },
       year: { type: Number, required: true },
@@ -18,7 +20,7 @@ class CarsModel {
     this.model = models.Cars || model<ICar>('Cars', this.schema);
   }
 
-  public async addCar(car: ICar): Promise<ICar> {
+  public async addVehicle(car: ICar): Promise<ICar> {
     return this.model.create(car);
   }
 
