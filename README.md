@@ -1,13 +1,15 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+<h1>Descrição do Projeto BackEnd</h1>
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+<p>O objetivo desse projeto é montar uma API de dados para uma loja de veiculos. Sendo possivel ver, adicionar e alterar carros e motos no banco de dados.</p>
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+<h3>Tecnologias usadas:</h3>
+
+- MongoDB
+- Express
+- Mongoose
+- TypeScript
+- Mocha & Chai
+
+<h3>Projeto individual desenvolvido por:</h3>
+
+- [@LeoAraujo30](https://github.com/LeoAraujo30)
