@@ -19,26 +19,17 @@ class MotorcyclesService {
     return new Motorcycle(newObj);
   }
 
-  // public async getAll(): Promise<motorcycle[]> {
-  //   const arraymotorcycles = await this.model.getAll();
-  //   const result = arraymotorcycles.map((motorcycle) => new motorcycle(motorcycle));
-  //   return result;
-  // }
+  public async getAll(): Promise<Motorcycle[]> {
+    const arraymotorcycles = await this.model.getAll();
+    const result = arraymotorcycles.map((motorcycle) => new Motorcycle(motorcycle));
+    return result;
+  }
 
-  // public async getOne(id: string): Promise<motorcycle | null> {
-  //   const objmotorcycle = await this.model.getOne(id);
-  //   if (objmotorcycle) return new motorcycle(objmotorcycle);
-  //   return null;
-  // }
-
-  // public async updateOne(id: string, newmotorcycle: IMotorcycle): Promise<motorcycle | null> {
-  //   const modifiedCount = await this.model.updateOne(id, newmotorcycle);
-  //   const objmotorcycle = await this.model.getOne(id);
-  //   if (modifiedCount === 0 && objmotorcycle === null) {
-  //     return null;
-  //   }
-  //   return new motorcycle(objmotorcycle as IMotorcycle);
-  // }
+  public async getOne(id: string): Promise<Motorcycle | null> {
+    const objmotorcycle = await this.model.getOne(id);
+    if (objmotorcycle) return new Motorcycle(objmotorcycle);
+    return null;
+  }
 }
 
 export default MotorcyclesService;

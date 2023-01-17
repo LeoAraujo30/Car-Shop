@@ -28,14 +28,6 @@ const mockCarReturn = {
   __v: 0,
 };
 
-// const mockUptate = {
-//   acknowledged: true,
-//   modifiedCount: 1,
-//   upsertedId: null,
-//   upsertedCount: 0,
-//   matchedCount: 1,
-// };
-
 describe('Testando a camada Service da rota "/cars"', function () {
   it('Testando a função "addCar"', async function () {
     sinon.stub(Model, 'create').resolves(mockCarReturn);
@@ -78,13 +70,4 @@ describe('Testando a camada Service da rota "/cars"', function () {
 
     (Model.findById as sinon.SinonStub).restore();
   });
-  // it('Testando a função "updateOne" com id valido', async function () {
-  //   sinon.stub(Model, 'updateOne').resolves(mockUptate);
-    
-  //   const result = await service.updateOne('63c5ab5a83998c6f696b4129');
-
-  //   expect(result).to.equal(null);
-
-  //   (Model.findById as sinon.SinonStub).restore();
-  // });
 });
